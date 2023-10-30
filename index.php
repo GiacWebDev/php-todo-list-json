@@ -5,7 +5,7 @@
 <body>
 
   <div id="app" class="container my-5 ">
-    <h1 class="text-center">TO DO LIST</h1>
+    <h1 class="text-center">{{ title }}</h1>
 
     <div class="container-fluid">
 
