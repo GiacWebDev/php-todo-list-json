@@ -1,13 +1,14 @@
 <!-- FRONTEND per interfaccia utente -->
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ToDo List</title>
-</head>
+<?php include __DIR__ . '/partials/head.php' ?>
+
 <body>
+
+  <div id="app">
+  <h1>CIAO MONDO</h1>
+  </div>
   
+  <!-- JS -->
+  <script src="script.js"></script>
 </body>
 </html>
