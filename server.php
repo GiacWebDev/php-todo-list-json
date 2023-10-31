@@ -1,6 +1,8 @@
-<!-- File per gestire la logica del server leggendo il file json -->
-<!-- sarà l'end-point della API -->
+
 <?php
+
+// File per gestire la logica del server leggendo il file json,
+// sarà l'end-point della API
 
 // salvo il file JSON in una variabile sotto forma di stringa (non ciclabile ancora)
 $json_string = file_get_contents('task.json');
