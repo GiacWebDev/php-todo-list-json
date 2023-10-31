@@ -33,8 +33,18 @@
       </ul>
 
       <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Scrivi un nuovo task">
-        <button class="btn btn-primary" type="button" id="button-addon2">Button</button>
+        <input 
+          type="text" 
+          class="form-control" 
+          placeholder="Scrivi una nuova task" 
+          v-model.trim="newTask">
+
+        <button 
+          @click="addTask"
+          class="btn btn-primary" 
+          type="button" 
+          id="button-addon2"
+          >Aggiungi</button>
       </div>
 
 

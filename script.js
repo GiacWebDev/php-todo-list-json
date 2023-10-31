@@ -4,6 +4,7 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
+      apiURL: 'server.php',
       title: "TO DO LIST",
       list: [],
       newTask: ''
@@ -14,14 +15,21 @@ createApp({
     getList() {
       console.log("lista");
       axios
-      .get("server.php")
-      .then(result => {
-        this.list = result.data;
+        .get(this.apiURL)
+        .then(result => {
+          this.list = result.data;
       });
     },
-  },
-  addTask(){
-    
+    addTask(){
+      // il dato deve venire da un form, utilizzo FormData
+      const data = new FormData();
+      data.append('taskItem', this.newTask);
+      axios 
+        .post(this.apiURL, data)
+        .then(result => {
+          console.log(result.data);  
+        })
+    },
   },
   // metodo richiamato al mounted
   mounted() {
