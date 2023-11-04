@@ -29,11 +29,14 @@
         <li
         v-for="(item, index) in list"
         class="list-group-item"
+        :class="{ completed: item.completed }"
+        @click="toggleTaskStatus(index)"
         >{{ item }}</li>
       </ul>
 
       <div class="input-group mb-3">
         <input 
+          @keyup.enter="addTask"
           type="text" 
           class="form-control" 
           placeholder="Scrivi una nuova task" 

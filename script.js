@@ -20,6 +20,7 @@ createApp({
           this.list = result.data;
       });
     },
+
     addTask(){
       // il dato deve venire da un form, utilizzo FormData
       const data = new FormData();
@@ -29,9 +30,15 @@ createApp({
         .then(result => {
           console.log(result.data);
           this.list = result.data
+          this.newTask = '';
         })
     },
+
+    toggleTaskStatus(index) {
+      this.list[index].completed = !this.list[index].completed;
+    }
   },
+
   // metodo richiamato al mounted
   mounted() {
     this.getList();
